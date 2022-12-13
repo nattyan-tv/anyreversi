@@ -31,7 +31,7 @@ const clear_plate = () => {
     for (y = 1; y <= 6; y++) {
         for (x = 1; x <= 6; x++) {
             const cell = document.getElementById(`cell${y}${x}`);
-            cell.innerHTML = "<img src='/images/cell_alpha.png'>";
+            cell.innerHTML = "<img src='images/cell_alpha.png'>";
             cell.setAttribute('onclick', `cell_click(${x}, ${y})`);
         }
     }
