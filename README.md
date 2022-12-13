@@ -1,3 +1,3 @@
 # Otherello
-（オスリロみたいな読み方）  
+（オセリロみたいな読み方）  
 Othello + three
