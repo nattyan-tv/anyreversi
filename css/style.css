@@ -3,3 +3,11 @@ body {
     background-color: #999999;
 }
 
+#main_plate {
+    background-color: #196b19;
+    border-collapse:  collapse;
+}
+
+th {
+    border: solid 4px #000;
+}
