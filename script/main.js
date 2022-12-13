@@ -22,7 +22,7 @@ let cell_state = DEFAULT_CELL.concat();
 const change_cell = (x, y, color) => {
     /// 指定したセルの色を指定した色に変更する
     const cell = document.getElementById(`cell${y}${x}`);
-    cell.innerHTML = `<img src='/images/cell_${color}.png'>`;
+    cell.innerHTML = `<img src='images/cell_${color}.png'>`;
     cell_state[y - 1][x - 1] = color;
 }
 
