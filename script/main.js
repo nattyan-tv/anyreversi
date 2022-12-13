@@ -20,7 +20,7 @@ const DEFAULT_CELL = [
 let cell_state = DEFAULT_CELL.concat();
 
 const change_cell = (x, y, color) => {
-    /// 指定しtセルの色を指定した色に変更する
+    /// 指定したセルの色を指定した色に変更する
     const cell = document.getElementById(`cell${y}${x}`);
     cell.innerHTML = `<img src='/images/cell_${color}.png'>`;
     cell_state[y - 1][x - 1] = color;
@@ -38,6 +38,7 @@ const clear_plate = () => {
 }
 
 const show_player = () => {
+    /// 今のプレイヤーを表示する
     const pls = document.getElementById("player_show");
     if (player_state) {
         pls.innerHTML = "黒のプレイヤーの番です！";
@@ -47,11 +48,13 @@ const show_player = () => {
 }
 
 const player_switch = () => {
+    /// プレイヤーを変更（して、表示する）
     player_state = !player_state;
     show_player();
 }
 
 const cell_click = (x, y) => {
+    /// セルをクリックした際の動作
     const color = (player_state ? BLACK : WHITE)
 
     if (cell_state[y - 1][x - 1] == ALPHA) {
@@ -64,6 +67,7 @@ const cell_click = (x, y) => {
 }
 
 const main = () => {
+    /// 初回起動時の処理（イニシャライズ）
     clear_plate();
     change_cell(3, 3, WHITE);
     change_cell(3, 4, BLACK);
